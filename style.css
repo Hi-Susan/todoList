@@ -1,0 +1,127 @@
+:root{
+  --main-color: #FF8674;
+  --black-color: #333333;
+  --dimgray-color: #BDBDBD;
+}
+
+html,body{
+  padding: 0;
+  margin: 0;
+  /* background-color: #aaa; */
+  color: var(--black-color);
+
+}
+a{
+  text-decoration: none;
+  color: var(--main-color);
+}
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-top: 10px;
+}
+li{
+  padding: 5px;
+  display: block;
+}
+.wrapper{
+  padding: 50px 20px;
+}
+.float-right{
+  float: right;
+}
+.card{
+  width: 500px;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px -2px rgba(0,0,0,.5);
+}
+.todo-add-bar{
+  padding-bottom: 20px;
+}
+.input-group{
+  font-size: 0;
+  vertical-align: top;
+  display: flex;
+}
+.input-group > *{
+  font-size: 16px;
+}
+.input-append-left, .input-append-right{
+  border: 1px solid var( --dimgray-color);
+  padding: 10px;
+  background-color: var(--main-color);;
+  color: #fff;
+}
+.input{
+  flex: 1 1 auto;
+  padding: 12px 10px;
+  border-radius: 0;
+  border: 1px solid var( --dimgray-color);
+  outline: none;
+  border-right: none;
+  border-left: none;
+}
+.input:focus{
+  outline: none;
+}
+.input-append-left{
+  border-right: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.input-append-right{
+  border-left: none;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.input-append-right > a{
+  color: #fff;
+}
+
+.todo-list-info{
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--dimgray-color);
+}
+.todo-list-content{
+  margin-bottom: 50px;
+}
+.checkbox{
+  margin-right: 10px;
+}
+.checkbox-group{
+  position: relative;
+}
+
+.checkbox-group::before,.checkbox-group::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 22px;
+  height: 22px;
+}
+.checkbox-group::before{
+  background-color: #fff;
+  z-index: 1;
+}
+.checkbox-group::after{
+  border: 1px solid var(--dimgray-color);
+  z-index: 2;
+}
+.checkbox-group.isChecked::after{
+  transform: rotate(45deg);
+  left: 5px;
+  width: 10px;
+  height: 18px;
+  border-top: none;
+  border-left: none;
+}
+.checkbox-group.isChecked > .todo-list-text{
+  text-decoration: line-through;
+}

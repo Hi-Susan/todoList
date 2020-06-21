@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="card">
+      <div class="todo-add-bar">
+        <div class="input-group">
+          <span class="input-append-left">待辦事項</span>
+          <input class="input" type="text" placeholder="請輸入準備要做的任務" id="addTodoInfo">
+          <span class="input-append-right"><a href="javascript:;" id="addTodo">新增</a></span>
+        </div>
+      </div>
+      <div class="todo-list">
+        <div class="todo-list-info">
+          <span>還有 <span id="taskUndoneCount">0</span> 筆任務等著你</span>
+          <a href="javascript:;" class="float-right">清除未完成任務</a>
+        </div>
+        <ul class="todo-list-content" id="taskUndone">
+          <li class="todo-Undone">
+            <label class="checkbox-group">
+              <input class="checkbox" type="checkbox" data-id="">
+              <span class="todo-list-text">測試測試測試</span>
+            </label>
+            <a href="javascript:;" class="todo-delete"></a>
+          </li>
+          <template id="todoTemplate">
+            <li class="todo-Undone">
+              <label>
+                <input type="checkbox" data-id="">
+                <span class="todo-list-text"></span>
+              </label>
+              <a href="javascript:;" class="todo-delete"></a>
+            </li>
+          </template>
+        </ul>
+        <div class="todo-list-info">
+          <span>已完成 <span id="taskDoneCount">0</span> 筆任務</span>
+          <a href="javascript:;" class="float-right">清除已完成任務</a>
+        </div>
+        <ul class="todo-list-content" id="taskDone">
+          <li>
+            <label class="checkbox-group isChecked">
+              <input class="checkbox"type="checkbox" data-id="" checked>
+              <span class="todo-list-text">測試測試測試</span>
+            </label>
+            <a href="javascript:;" class="todo-delete"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
