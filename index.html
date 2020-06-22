@@ -19,39 +19,14 @@
       <div class="todo-list">
         <div class="todo-list-info">
           <span>還有 <span id="taskUndoneCount">0</span> 筆任務等著你</span>
-          <a href="javascript:;" class="float-right">清除未完成任務</a>
+          <a href="javascript:;" class="clearTaskList float-right" data-is-done="false">清除未完成任務</a>
         </div>
-        <ul class="todo-list-content" id="taskUndone">
-          <li class="todo-Undone">
-            <label class="checkbox-group">
-              <input class="checkbox" type="checkbox" data-id="">
-              <span class="todo-list-text">測試測試測試</span>
-            </label>
-            <a href="javascript:;" class="todo-delete"></a>
-          </li>
-          <template id="todoTemplate">
-            <li class="todo-Undone">
-              <label>
-                <input type="checkbox" data-id="">
-                <span class="todo-list-text"></span>
-              </label>
-              <a href="javascript:;" class="todo-delete"></a>
-            </li>
-          </template>
-        </ul>
+        <ul class="todo-list-content" id="taskUndone"></ul>
         <div class="todo-list-info">
           <span>已完成 <span id="taskDoneCount">0</span> 筆任務</span>
-          <a href="javascript:;" class="float-right">清除已完成任務</a>
+          <a href="javascript:;" class="clearTaskList float-right" data-is-done="true">清除已完成任務</a>
         </div>
-        <ul class="todo-list-content" id="taskDone">
-          <li>
-            <label class="checkbox-group isChecked">
-              <input class="checkbox"type="checkbox" data-id="" checked>
-              <span class="todo-list-text">測試測試測試</span>
-            </label>
-            <a href="javascript:;" class="todo-delete"></a>
-          </li>
-        </ul>
+        <ul class="todo-list-content" id="taskDone"></ul>
       </div>
     </div>
   </div>
