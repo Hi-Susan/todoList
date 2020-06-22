@@ -7,15 +7,15 @@ function addTask (isDone) {
   document.querySelector('#addTodoInfo').value = '';
   if(text === '') return
   isDone ? taskDone.push(text) : taskUndone.push(text)
-  updataTaskList();
+  updateTaskList();
 }
 // 清除 任務資料
 function clearTaskList (isDone) {
   isDone ? taskDone = [] : taskUndone = []
-  updataTaskList();
+  updateTaskList();
 }
 // 更新 任務列表
-function updataTaskList () {
+function updateTaskList () {
   removeAllTask();
   taskUndone.forEach(function(element) {
     document.querySelector('#taskUndone').innerHTML += taskTemplate(false, element)
@@ -23,11 +23,11 @@ function updataTaskList () {
   taskDone.forEach(function(element) {
     document.querySelector('#taskDone').innerHTML += taskTemplate(true, element)
   })
-  updataTaskCount();
+  updateTaskCount();
   checkedTask();
 }
 // 更新 任務列表數量總計
-function updataTaskCount () {
+function updateTaskCount () {
   document.querySelector('#taskUndoneCount').textContent = taskUndone.length
   document.querySelector('#taskDoneCount').textContent = taskDone.length
 }
@@ -63,7 +63,7 @@ function checkedTask () {
         taskUndone.push(taskDone[index]);
         taskDone.splice(index, 1)
       }
-      updataTaskList();
+      updateTaskList();
     })
   })
 }
