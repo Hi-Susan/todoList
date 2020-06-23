@@ -91,6 +91,37 @@ li{
 .todo-list-content{
   margin-bottom: 50px;
 }
+.todo-list-content li{
+  position: relative;
+}
+.todo-delete{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.todo-delete::after, .todo-delete::before{
+  content: '';
+  display: block;
+  width: 60%;
+  height: 2px;
+  background: var(--dimgray-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.todo-delete::after{
+  transform: translate(-50%,25%) rotate(45deg);
+  transform-origin: center;
+}
+.todo-delete::before{
+  transform: translate(-50%,25%) rotate(-45deg);
+  transform-origin: center;
+  
+}
 .checkbox{
   margin-right: 10px;
 }
